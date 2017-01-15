@@ -1,0 +1,9 @@
+<h2>List of Books</h2>
+
+<ul class="books-container">
+{{#each content as |book| }}
+  <li>{{link-to book.id 'book.author' book.id}}</li>
+{{/each}}
+</ul>
+
+{{outlet}}
