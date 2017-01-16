@@ -3,9 +3,9 @@
 <ul class="books-container">
 {{#each content as |book| }}
    <li>
-     <span {{action 'favoriteClicked' org}} >
+     <!-- <span {{action 'favoriteClicked' org}} >
        [ Favorite ]
-     </span>
+     </span> -->
     {{link-to book.id 'book' book.id}}
    </li>
 {{/each}}

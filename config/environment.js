@@ -19,8 +19,9 @@ module.exports = function(environment) {
     contentSecurityPolicyHeader: 'Content-Security-Policy',
     contentSecurityPolicy: {
       // ... other stuff here
-      'script-src': "'self' 'unsafe-eval' http://www.api.nypl.org/*",
-      'connect-src': "'self' http://localhost:4200 http://www.api.repo.nypl.org/*"
+      'default-src': ["'self'", "*.nypl.org"],
+      'script-src': ["'self'", "'unsafe-eval'", "*.nypl.org", "http://localhost:4200"],
+      'connect-src': ["'self'","http://localhost:4200", "*.nypl.org"]
     },
     APP: {
       'Access-Control-Allow-Origin': '*'
