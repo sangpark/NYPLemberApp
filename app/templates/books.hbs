@@ -2,7 +2,12 @@
 
 <ul class="books-container">
 {{#each content as |book| }}
-  <li>{{link-to book.id 'book.author' book.id}}</li>
+   <li>
+     <span {{action 'favoriteClicked' org}} >
+       [ Favorite ]
+     </span>
+    {{link-to book.id 'book' book.id}}
+   </li>
 {{/each}}
 </ul>
 
