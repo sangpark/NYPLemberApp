@@ -16,10 +16,14 @@ module.exports = function(environment) {
         Date: false
       }
     },
-
+    contentSecurityPolicyHeader: 'Content-Security-Policy',
+    contentSecurityPolicy: {
+      // ... other stuff here
+      'script-src': "'self' 'unsafe-eval' http://www.api.nypl.org/*",
+      'connect-src': "'self' http://localhost:4200 http://www.api.repo.nypl.org/*"
+    },
     APP: {
-      // Here you can pass flags/options to your application instance
-      // when it is created
+      'Access-Control-Allow-Origin': '*'
     }
   };
 
